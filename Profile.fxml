@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock.ProfileController">
+   <children>
+      <Pane prefHeight="603.0" prefWidth="218.0" style="-fx-background-color: #363948;">
+         <children>
+            <ImageView fx:id="imageview" fitHeight="141.0" fitWidth="178.0" layoutX="39.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@login.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="18.0" layoutY="211.0" prefHeight="35.0" prefWidth="184.0" text="Welcome to Stock Manager" textFill="#a0a2ab" />
+            <Label layoutX="22.0" layoutY="246.0" text="Your Profile Info" textFill="#a0a2ab" />
+            <Line endX="100.0" layoutX="101.0" layoutY="283.0" startX="-100.0" stroke="WHITE" />
+            <JFXButton layoutX="22.0" layoutY="310.0" onAction="#profilebtns" text="Profile" textFill="WHITE" />
+            <JFXButton layoutX="22.0" layoutY="354.0" onAction="#sellShare" text="Sell Share" textFill="#f8f8f8" />
+            <JFXButton layoutX="21.0" layoutY="403.0" onAction="#buyShare" text="Buy Share" textFill="#fffbfb" />
+         </children>
+      </Pane>
+      <AnchorPane fx:id="holderPane" layoutX="231.0" layoutY="65.0" prefHeight="530.0" prefWidth="625.0">
+         <children>
+            <TextField fx:id="fnn" layoutX="180.0" layoutY="29.0" />
+            <TextField fx:id="lnn" layoutX="180.0" layoutY="84.0" />
+            <TextField fx:id="pm" layoutX="180.0" layoutY="147.0" />
+            <TextField fx:id="con" layoutX="180.0" layoutY="216.0" />
+            <TextField fx:id="cit" layoutX="180.0" layoutY="280.0" />
+            <TextField fx:id="dma" layoutX="180.0" layoutY="346.0" />
+            <Label layoutX="69.0" layoutY="34.0" text="First Name" />
+            <Label layoutX="72.0" layoutY="89.0" text="Last Name" />
+            <Label layoutX="72.0" layoutY="152.0" text="Permanent" />
+            <Label layoutX="72.0" layoutY="216.0" text="Citizen" />
+            <Label layoutX="72.0" layoutY="280.0" text="Contact" />
+            <Label layoutX="72.0" layoutY="346.0" text="Dmat" />
+            <JFXButton buttonType="RAISED" layoutX="468.0" layoutY="461.0" onAction="#update" style="-fx-background-color: white;" text="Update Profile" />
+            <PasswordField fx:id="passwordfield" layoutX="180.0" layoutY="409.0" />
+            <Label layoutX="73.0" layoutY="414.0" text="Password" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="218.0" layoutY="-7.0" prefHeight="62.0" prefWidth="665.0" style="-fx-background-color: #363948 #363948;">
+         <children>
+            <Label layoutX="242.0" layoutY="21.0" text="Welcome" textFill="#f8f0f0" />
+            <JFXButton fx:id="logout" layoutX="557.0" layoutY="9.0" onAction="#LogOut" text="Logout" textFill="#fffefe" underline="true">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

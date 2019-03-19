@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" fx:id="sellAnchor" prefHeight="473.0" prefWidth="752.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock.SellItemsController">
+
+   <children>
+      <Pane layoutX="14.0" layoutY="-48.0" prefHeight="473.0" prefWidth="752.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="companyTable" layoutX="-9.0" layoutY="-7.0" prefHeight="423.0" prefWidth="764.0">
+              <columns>
+                  <TableColumn fx:id="idcolumn" prefWidth="68.0" text="Id" />
+                <TableColumn fx:id="totalshares" prefWidth="198.0" text="Total Shared Announced" />
+                <TableColumn fx:id="sharerate" minWidth="0.0" prefWidth="111.0" text="Share Rate" />
+                  <TableColumn fx:id="announceDate" minWidth="0.0" prefWidth="407.0" text="Announced Date" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="414.0" layoutY="428.0" onAction="#LoadGraph" text="Load Details Of Company" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock.HOMEController">
+   <children>
+      <TextField fx:id="fnn" editable="false" layoutX="206.0" layoutY="52.0" />
+      <TextField fx:id="lnn" editable="false" layoutX="206.0" layoutY="119.0" />
+      <TextField fx:id="pm" editable="false" layoutX="206.0" layoutY="187.0" />
+      <TextField fx:id="con" editable="false" layoutX="206.0" layoutY="262.0" />
+      <TextField fx:id="cit" editable="false" layoutX="206.0" layoutY="330.0" />
+      <TextField fx:id="dma" editable="false" layoutX="206.0" layoutY="404.0" />
+      <Label layoutX="114.0" layoutY="57.0" text="First Name" />
+      <Label layoutX="115.0" layoutY="124.0" text="Last Name" />
+      <Label layoutX="114.0" layoutY="192.0" text="Permanent" />
+      <Label layoutX="120.0" layoutY="267.0" text="Citizen" />
+      <Label layoutX="117.0" layoutY="335.0" text="Contact" />
+      <Label layoutX="124.0" layoutY="409.0" text="Dmat" />
+   </children>
+</AnchorPane>

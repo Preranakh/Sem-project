@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="684.0" prefWidth="1178.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AdminController">
+   <children>
+      <Pane layoutX="98.0" layoutY="166.0" prefHeight="684.0" prefWidth="1178.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane layoutX="-7.0" prefHeight="684.0" prefWidth="1188.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="company">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="645.0" prefWidth="1168.0" style="-fx-background-color: #363948 #363948;">
+                           <children>
+                              <TableView fx:id="companytableView" layoutX="325.0" layoutY="-4.0" prefHeight="650.0" prefWidth="865.0" style="-fx-background-color: transparent;" tableMenuButtonVisible="true">
+                                <columns>
+                                    <TableColumn fx:id="idcolumn" editable="false" prefWidth="75.0" text="Id" />
+                                  <TableColumn fx:id="totalsharecolumn" prefWidth="194.0" text="Total Shared Announced" />
+                                  <TableColumn fx:id="shareratecolumn" minWidth="0.0" prefWidth="178.0" text="Share Rate" />
+                                    <TableColumn fx:id="announceddatecolumn" minWidth="0.0" prefWidth="572.0" text="Announced Date" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="tsa" layoutX="43.0" layoutY="108.0" prefHeight="31.0" prefWidth="249.0" promptText="Total shared announced" />
+                              <TextField fx:id="sr" layoutX="41.0" layoutY="153.0" prefHeight="31.0" prefWidth="251.0" promptText="Share Rate" />
+                              <JFXButton buttonType="RAISED" layoutX="47.0" layoutY="310.0" onAction="#addEntry" prefHeight="31.0" prefWidth="240.0" style="-fx-background-color: black;" text="Add Entry" textFill="#d3cfcf" />
+                              <JFXButton buttonType="RAISED" layoutX="47.0" layoutY="348.0" onAction="#Clear" prefHeight="31.0" prefWidth="240.0" style="-fx-background-color: black;" text="Clear" textFill="#d3cfcf" />
+                              <JFXButton buttonType="RAISED" layoutX="47.0" layoutY="391.0" onAction="#loadCompanyData" prefHeight="31.0" prefWidth="240.0" style="-fx-background-color: black;" text="Load Data" textFill="#d3cfcf" />
+                              <JFXButton buttonType="RAISED" layoutX="47.0" layoutY="436.0" onAction="#delete" prefHeight="31.0" prefWidth="240.0" style="-fx-background-color: black;" text="Delete" textFill="#d3cfcf" />
+                              <TextField fx:id="dt" layoutX="42.0" layoutY="206.0" prefHeight="31.0" prefWidth="249.0" promptText="Date" />
+                              <JFXButton fx:id="logout" buttonType="RAISED" layoutX="47.0" layoutY="478.0" onAction="#Logout" prefHeight="31.0" prefWidth="239.0" style="-fx-background-color: black;" text="Logout" textFill="#d3cfcf" />
+                              <TextField fx:id="id" layoutX="44.0" layoutY="67.0" prefHeight="31.0" prefWidth="247.0" promptText="Id" />
+                              <JFXButton buttonType="RAISED" layoutX="47.0" layoutY="521.0" onAction="#Update" prefHeight="31.0" prefWidth="239.0" style="-fx-background-color: black;" text="Update" textFill="#f8f4f4" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Profile">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="profietableview" layoutX="243.0" layoutY="-4.0" prefHeight="653.0" prefWidth="945.0" style="-fx-background-color: #363948 #363948;" tableMenuButtonVisible="true">
+                                <columns>
+                                  <TableColumn fx:id="fnamecolum" prefWidth="133.0" text="FirstName" />
+                                  <TableColumn fx:id="lnamecolumn" prefWidth="107.0" text="LastName" />
+                                    <TableColumn fx:id="dmatcolumn" prefWidth="107.0" text="Dmat" />
+                                    <TableColumn fx:id="permanentcolumn" prefWidth="132.0" text="Permanent Add" />
+                                    <TableColumn fx:id="contactcolumn" prefWidth="132.0" text="Contact" />
+                                    <TableColumn fx:id="citizencolumn" prefWidth="132.0" text="Citizen" />
+                                    <TableColumn fx:id="passwordcolumn" prefWidth="180.0" text="Password" />
+                                </columns>
+                              </TableView>
+                              <Pane prefHeight="651.0" prefWidth="242.0" style="-fx-background-color: #363948 #363948;">
+                                 <children>
+                                    <TextField fx:id="fnametexfield" layoutX="29.0" layoutY="64.0" promptText="First Name" />
+                                    <TextField fx:id="lnametextfield" layoutX="29.0" layoutY="114.0" promptText="Last Name" />
+                                    <TextField fx:id="dmattextfield" layoutX="29.0" layoutY="167.0" promptText="Dmat" />
+                                    <TextField fx:id="permanenttextfield" layoutX="29.0" layoutY="216.0" promptText="permanent Address" />
+                                    <TextField fx:id="contacttextfield" layoutX="29.0" layoutY="269.0" promptText="Contact" />
+                                    <TextField fx:id="citizentextfield" layoutX="29.0" layoutY="326.0" promptText="Citizen" />
+                                    <TextField fx:id="passwordtextfield" layoutX="29.0" layoutY="379.0" promptText="Password" />
+                                    <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="446.0" onAction="#addEntryProfile" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: black;" text="Add Entry" textFill="WHITE" />
+                                    <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="494.0" onAction="#DeleteProfile" prefHeight="31.0" prefWidth="185.0" style="-fx-background-color: black;" text="Delete" textFill="WHITE" />
+                                    <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="539.0" onAction="#UpdateProfile" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: black;" text="Update" textFill="WHITE" />
+                                    <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="583.0" onAction="#clearprofile" prefHeight="31.0" prefWidth="183.0" style="-fx-background-color: black;" text="Clear" textFill="WHITE" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
